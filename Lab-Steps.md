@@ -96,7 +96,7 @@ The most recent version of HashiCorp Vault (as of March 2020) has been downloade
     ./vault status
     ```
 
-    ![Vault Status](images/Vault_Status.png)
+    ![Vault Status](Images/Vault_Status.png)
 
     **NOTE: Currently the vault has not been initialized, and has not yet been unsealed.**
 
@@ -106,7 +106,7 @@ The most recent version of HashiCorp Vault (as of March 2020) has been downloade
     ./vault operator init
     ```
 
-    ![Vault Initialized](images/Vault_Initialized.png)
+    ![Vault Initialized](Images/Vault_Initialized.png)
 
     **NOTE: The unseal keys are fragments of a master key. This lab uses the default quorum of 3 of 5 which must be provided to Vault to unseal it. The total and number required for a quorum can be changed using the -key-shares and -key-threshold options.**
 
@@ -136,15 +136,15 @@ In the first exercise, the PKI Backend Plugin was downloaded and placed inside t
 
 1. Login to WebAdmin using the External Address from the sidebar of the CloudShare environment, making sure to add the proper “/vedadmin” to the end of the URL:
 
-    ![Connection Details](images/CS_Connection_Details.png)
+    ![Connection Details](Images/CS_Connection_Details.png)
 
 2. Create a Policy folder called “Vault Requests” under the “Certificates” parent folder:
 
-    ![Vault Requests Folder](images/Vault_Requests_Folder.png)
+    ![Vault Requests Folder](Images/Vault_Requests_Folder.png)
 
 3. Ensure that “venafidemo.com” is the only whitelisted domain for this Policy:
 
-    ![Whitelist](images/venafidemo_Whitelist.png)
+    ![Whitelist](Images/venafidemo_Whitelist.png)
 
 4. Connect back into the Vault VM, either with SSH or using the CloudShare interface, and change to the /opt/vault directory:
 
@@ -184,7 +184,7 @@ In the first exercise, the PKI Backend Plugin was downloaded and placed inside t
 
 9. Log back into Web Admin and update the “Allowed Domains” to include example.com:
 
-    ![Allowed Domains](images/Allowed_Domains.png)
+    ![Allowed Domains](Images/Allowed_Domains.png)
 
 10. Try the same request from Step 8 again, and it should now complete successfully:
 
@@ -225,7 +225,7 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
 4. Create two new policy folders called “Vault Policy” and “Vault Issued” in the Certificates parent folder
 
-    ![Monitor Folders](images/Monitor_Folders.png)
+    ![Monitor Folders](Images/Monitor_Folders.png)
 
 5. Configure the Vault Policy folder with the following settings:
     - Organization set to “Venafi Inc.” **[LOCK POLICY]**
@@ -236,7 +236,7 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
 7. Connect to the Ubuntu Server in your lab environment – For SSH access, the external address and OS credentials will be different for each user, but can be found in the CloudShare GUI left-hand navigation pane of the HashiCorp Vault tab:
 
-    ![CS Connection Details](images/CS_Connection_Details.png)
+    ![CS Connection Details](Images/CS_Connection_Details.png)
 
 8. Change to the root user
 
@@ -320,11 +320,11 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
 19. Log into the TPP Web Admin user interface and check the contents of the "Vault Issued" folder:
 
-    ![App 4](images/app4.png)
+    ![App 4](Images/app4.png)
 
 20. Now, let's test the impact of removing TPP connectivity to Vault - Temporarily stop the VEDWebSDK application pool on the TPP server:
 
-    ![Venafi Services](images/Venafi_Services.png)
+    ![Venafi Services](Images/Venafi_Services.png)
 
 21. Request a few more certificates from Vault:
 
@@ -342,7 +342,7 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
 22. Check the `Vault Issued` folder in Web Admin again and it should still only contain the first test certificate, `app4.venafidemo.com`
 
-    ![App 4](images/app4.png)
+    ![App 4](Images/app4.png)
 
 23. Execute the following command to view the forwarding queue:
 
@@ -350,7 +350,7 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
     ./vault list pki-local/import-queue
     ```
 
-    ![Import Queue](images/Import_Queue.png)
+    ![Import Queue](Images/Import_Queue.png)
 
 24. Now, attempt to circumvent the applied Venafi policy by deleting it and creating a non-compliant certificate:
 
@@ -362,7 +362,7 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
     **NOTE: Since we are using the strict version of the plugin, a policy is required in order to issue certificates***
 
-    ![No Policy](images/No_Policy.png)
+    ![No Policy](Images/No_Policy.png)
 
 25. Re-apply the same policy from step 13:
 
@@ -372,6 +372,6 @@ This allows HashiCorp Vault to issue certificates using Vault at the almost inst
 
 26. Restart the VEDWebSDK application pool on the TPP server and the monitor plugin should begin forwarding the certificates in the queue to the Venafi platform:
 
-    ![From Queue](images/From_Queue.png)
+    ![From Queue](Images/From_Queue.png)
 
 ## **Exercise #4 – Limit Vault Access & Request Certificates Using the API**
