@@ -1,29 +1,8 @@
-# The Lab Environment
-
-This Venafi Trust Protection Platform lab environment contains the following virtual machines that have been pre-configured with the proper networking and settings. The environment includes:
-
-- **1x Trust Protection Platform Server (TPP 19.4.1)**
-  - Microsoft Certification Authority (venafidemo-TPP-CA)
-  - Active Directory Domain Services (venafidemo.com)
-  - DNS (venafidemo.com)
-  - IIS Server (for Venafi GUIs)
-  - MS SQL Express 2016
-- **1x Ubuntu 18.04 Server**
-  - Minimal Install
-
-| VM | Internal IP | Internal DNS  |  Username | Password |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-|HashiCorp Vault | 192.168.1.101 | ubuntu.venafidemo.com | sysadmin | XXXXXXXXXX |
-| TPP Server (RDP) | 192.168.1.100 | tpp.venafidemo.com | venafi_svc | 5&Njgx8IGyHQ
-| Venafi Platform | 192.168.1.100 | tpp.venafidemo.com | tppadmin | Passw0rd123! |
-
----
-
-## **About This Lab**
+# **About This Lab**
 
 This lab walks end users through the process of installing and configuring HashiCorp Vault and two open-source Vault plugins created by Venafi, as well as demonstrates a couple of example use cases.
 
-### **Background**
+## **Background**
 
 Issuing a machine identity today, in many organizations, can take DAYS and is often a very manual process. Naturally, that can create bottlenecks for security or PKI teams that are typically dealing with multiple product and/or application developer teams. Manual processes are also prone to human error that could otherwise be avoided by introducing some form of automation. These problems are exacerbated when organizations are using DevOps practices.
 
