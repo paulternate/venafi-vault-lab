@@ -6,9 +6,7 @@ This section walks through the necessary installation and configuration steps fo
 
 The most recent version of HashiCorp Vault (as of March 2020) has been downloaded to the /tmp directory of the Ubuntu server.
 
-1. Connect to the Ubuntu Server in your lab environment – For SSH access, the external address and OS credentials will be different for each user, but can be found in the CloudShare GUI left-hand navigation pane of the HashiCorp Vault tab:
-
-    ![Connection Details](Images/CS_Connection_Details.png)
+1. Connect to a Linux Server in your lab environment that will be the target for the Vault installation.
 
 2. Change to the root user:
 
@@ -134,9 +132,7 @@ The most recent version of HashiCorp Vault (as of March 2020) has been downloade
 
 In the first exercise, the PKI Backend Plugin was downloaded and placed inside the /opt/vault/plugins directory. In exercise 2, we will configure the plugin and demonstrate some examples of the integration.
 
-1. Login to WebAdmin using the External Address from the sidebar of the CloudShare environment, making sure to add the proper “/vedadmin” to the end of the URL:
-
-    ![Connection Details](Images/CS_Connection_Details.png)
+1. Login to WebAdmin.
 
 2. Create a Policy folder called “Vault Requests” under the “Certificates” parent folder:
 
