@@ -20,10 +20,4 @@ This is a Venafi PKI Monitoring Secrets Engine for HashiCorp Vault that enforces
 
 This allows HashiCorp Vault to issue certificates using Vault at the almost instantaneous speed that DevOps teams expect, while still providing the security teams the control and visibility they require.
 
----
-
-## **Accessing the Lab Environment**
-
-You should have received lab access directly from the CloudShare platform. The lab environment will be valid for two weeks and will automatically be shut down after that time. If you require additional lab time, please reach out to paul.cleary@venafi.com.
-
-The environment supports working directly in the browser or utilizing SSH/RDP if preferred. The credentials can be found at the beginning of this document as well as in the left-hand navigation pane of the CloudShare GUI.
+Proceed to the [Lab](Lab-Steps.md) to get started.
