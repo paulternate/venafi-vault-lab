@@ -8,7 +8,7 @@ The most recent version of HashiCorp Vault (as of March 2020) has been downloade
 
 1. Connect to the Ubuntu Server in your lab environment – For SSH access, the external address and OS credentials will be different for each user, but can be found in the CloudShare GUI left-hand navigation pane of the HashiCorp Vault tab:
 
-    ![Connection Details](images/CS_Connection_Details.png)
+    ![](images/CS_Connection_Details.png)
 
 2. Change to the root user:
 
